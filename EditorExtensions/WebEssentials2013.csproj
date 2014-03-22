@@ -1,0 +1,995 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>12.0</MinimumVisualStudioVersion>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>12.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <StartAction>Program</StartAction>
+    <StartProgram>$(DevEnvDir)\devenv.exe</StartProgram>
+    <StartArguments>/rootsuffix Exp</StartArguments>
+    <ZipPackageCompressionLevel>Normal</ZipPackageCompressionLevel>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Source.extension.vsixmanifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <DelaySign>false</DelaySign>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{10D05BC1-CDEE-4D14-B88F-F91C0BDC7861}</ProjectGuid>
+    <ProjectTypeGuids>{82b43b9b-a64c-4715-b499-d71e9ca2bd60};{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MadsKristensen.EditorExtensions</RootNamespace>
+    <AssemblyName>WebEssentials2013</AssemblyName>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>CodeAnalysis.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <DeployExtension>True</DeployExtension>
+    <CopyVsixExtensionFiles>False</CopyVsixExtensionFiles>
+    <CopyVsixExtensionLocation>bin/release/new folder</CopyVsixExtensionLocation>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxMin, Version=5.7.5124.21494, Culture=neutral, PublicKeyToken=21ef50ce11b5d80f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\AjaxMin.5.7.5124.21499\lib\net40\AjaxMin.dll</HintPath>
+    </Reference>
+    <Reference Include="ConfOxide, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\ConfOxide.1.3.0.0\lib\net40\ConfOxide.dll</HintPath>
+    </Reference>
+    <Reference Include="CssSorter">
+      <HintPath>..\CssSorter.dll</HintPath>
+    </Reference>
+    <Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="EnvDTE80, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="EnvDTE90, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="MarkdownSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=86ca04712d6fe173, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MarkdownSharp.1.13.0.0\lib\35\MarkdownSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Collections.Immutable, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.VisualStudio.JSLS" />
+    <Reference Include="Microsoft.VisualStudio.Language.StandardClassification" />
+    <Reference Include="Microsoft.CSS.Core, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>$(DevEnvDir)\CommonExtensions\Microsoft\Web\Editor\Microsoft.CSS.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSS.Editor, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>$(DevEnvDir)\CommonExtensions\Microsoft\Web\Editor\Microsoft.CSS.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Html.Core, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>$(DevEnvDir)\CommonExtensions\Microsoft\Web\Editor\Microsoft.Html.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Html.Editor, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>$(DevEnvDir)\CommonExtensions\Microsoft\Web\Editor\Microsoft.Html.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TextManager.Interop.12.0" />
+    <Reference Include="Microsoft.VisualStudio.Html.Package" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualStudio.ComponentModelHost, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.CoreUtility, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.Language.Intellisense, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.Language.NavigateTo.Interfaces, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.Shell.12.0, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.11.0, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Text.Data, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.Text.Logic, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.Text.UI, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.Text.UI.Wpf, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.TextManager.Interop.8.0, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.VisualStudio.Threading, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.Web.BrowserLink.12.0, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.Web.Extensions">
+      <HintPath>$(DevEnvDir)\Extensions\Microsoft\Web Tools\Languages\Microsoft.VisualStudio.Web.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Core, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>$(DevEnvDir)\CommonExtensions\Microsoft\Web\Editor\Microsoft.Web.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Editor, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.OLE.Interop" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.8.0" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.9.0" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.10.0" />
+    <Reference Include="Microsoft.VisualStudio.TextManager.Interop" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Immutable.10.0" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Immutable.11.0" />
+    <Reference Include="Microsoft.Web.Editor, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>$(DevEnvDir)\CommonExtensions\Microsoft\Web\Editor\Microsoft.Web.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.5.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebMarkupMin.Core, Version=0.8.13.0, Culture=neutral, PublicKeyToken=99472178d266584b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\WebMarkupMin.Core.0.8.13\lib\net40\WebMarkupMin.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="ZenCoding, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ZenCoding.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Adornments\Color\ColorAdornment.cs" />
+    <Compile Include="Adornments\Color\ColorAdornmentTagger.cs" />
+    <Compile Include="Adornments\Color\ColorAdornmentTaggerProvider.cs" />
+    <Compile Include="Adornments\Color\ColorTag.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Adornments\Color\ColorTagger.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Adornments\Color\ColorTaggerProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Adornments\Color\IntraTextAdornmentTagger.cs" />
+    <Compile Include="BrowserLink\BestPractices\BestPracticesBrowserLink.cs" />
+    <Compile Include="BrowserLink\BestPractices\Rules\Description.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserLink\BestPractices\Rules\IRule.cs" />
+    <Compile Include="BrowserLink\BestPractices\Rules\Microdata.cs" />
+    <Compile Include="BrowserLink\BestPractices\Rules\RobotsTxt.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserLink\BestPractices\Rules\RulesFactory.cs" />
+    <Compile Include="BrowserLink\BestPractices\Rules\Viewport.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BrowserLink\CssSync\CssSyncSuppressionContext.cs" />
+    <Compile Include="BrowserLink\DesignMode\DesignModeBrowserLink.cs" />
+    <Compile Include="BrowserLink\InspectMode\InspectModeBrowserLink.cs" />
+    <Compile Include="BrowserLink\CssSync\CssSyncBrowserLink.cs" />
+    <Compile Include="BrowserLink\Menu\MenuBrowserLink.cs" />
+    <Compile Include="BrowserLink\PixelPushing\CssDeltaAction.cs" />
+    <Compile Include="BrowserLink\PixelPushing\CssRuleBlockSyncAction.cs" />
+    <Compile Include="BrowserLink\PixelPushing\CssRuleDefinitionSync.cs" />
+    <Compile Include="BrowserLink\PixelPushing\CssSelectorChangeData.cs" />
+    <Compile Include="BrowserLink\PixelPushing\PixelPushingMenu.cs" />
+    <Compile Include="BrowserLink\PixelPushing\PixelPushingMode.cs" />
+    <Compile Include="BrowserLink\PixelPushing\PixelPusingModeFactory.cs" />
+    <Compile Include="BrowserLink\UnusedCss\AmbientRuleContext.cs" />
+    <Compile Include="BrowserLink\UnusedCss\CompositeUsageData.cs" />
+    <Compile Include="BrowserLink\UnusedCss\CssDocument.cs" />
+    <Compile Include="BrowserLink\UnusedCss\CssRule.cs" />
+    <Compile Include="BrowserLink\UnusedCss\DocumentBase.cs" />
+    <Compile Include="BrowserLink\UnusedCss\LessDocument.cs" />
+    <Compile Include="BrowserLink\UnusedCss\RuleRegistry.cs" />
+    <Compile Include="BrowserLink\UnusedCss\DocumentFactory.cs" />
+    <Compile Include="BrowserLink\UnusedCss\ErrorList.cs" />
+    <Compile Include="BrowserLink\UnusedCss\IDocument.cs" />
+    <Compile Include="BrowserLink\UnusedCss\IResolutionRequiredDataSource.cs" />
+    <Compile Include="BrowserLink\UnusedCss\IStylingRule.cs" />
+    <Compile Include="BrowserLink\UnusedCss\IUsageDataSource.cs" />
+    <Compile Include="BrowserLink\UnusedCss\MessageDisplayManager.cs" />
+    <Compile Include="BrowserLink\UnusedCss\MessageDisplaySource.cs" />
+    <Compile Include="BrowserLink\UnusedCss\RawRuleUsage.cs" />
+    <Compile Include="BrowserLink\UnusedCss\RuleExtensions.cs" />
+    <Compile Include="BrowserLink\UnusedCss\RuleUsage.cs" />
+    <Compile Include="BrowserLink\UnusedCss\SessionResult.cs" />
+    <Compile Include="BrowserLink\UnusedCss\SourceLocation.cs" />
+    <Compile Include="BrowserLink\UnusedCss\UnusedCssExtensionFactory.cs" />
+    <Compile Include="BrowserLink\UnusedCss\UnusedCssExtension.cs" />
+    <Compile Include="BrowserLink\UnusedCss\UnusedCssMenu.cs" />
+    <Compile Include="BrowserLink\UnusedCss\UsageRegistry.cs" />
+    <Compile Include="BrowserLink\UploadHelper.cs" />
+    <Compile Include="Classifications\AppCache\AppCacheClassificationTypes.cs" />
+    <Compile Include="Classifications\AppCache\AppCacheClassifier.cs" />
+    <Compile Include="Classifications\AppCache\AppCacheClassifierProvider.cs" />
+    <Compile Include="Classifications\AppCache\AppCacheContentTypeDefinition.cs" />
+    <Compile Include="Classifications\CSS\ImportantClassifier.cs" />
+    <Compile Include="Classifications\CSS\VariableClassifier.cs" />
+    <Compile Include="Classifications\HTML\HtmlRegionTagger.cs" />
+    <Compile Include="Classifications\IcedCoffeeScript\IcedCoffeeScriptContentTypeDefinition.cs" />
+    <Compile Include="Classifications\JavaScript\JavaScriptArrayOutlining.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classifications\JavaScript\JavaScriptOutlining.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classifications\JavaScript\JavaScriptRegionTagger.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classifications\Markdown\BufferGenerator.cs" />
+    <Compile Include="Classifications\Markdown\CodeArtifactProcessor.cs" />
+    <Compile Include="Classifications\Markdown\CodeLanguageEmbedders.cs" />
+    <Compile Include="Classifications\Markdown\ContainedLanguageAdapter.cs" />
+    <Compile Include="Classifications\Markdown\ContentTypeHandler.cs" />
+    <Compile Include="Classifications\Markdown\MarkdownOutlineTagger.cs" />
+    <Compile Include="Classifications\Markdown\MarkdownLanguageSupport.cs" />
+    <Compile Include="Classifications\Markdown\MarkdownParser.cs" />
+    <Compile Include="Classifications\SASS\SassClassificationTypes.cs" />
+    <Compile Include="Classifications\SASS\SassClassifier.cs" />
+    <Compile Include="Classifications\SASS\SassClassifierProvider.cs" />
+    <Compile Include="Classifications\SASS\SassContentTypeDefinition.cs" />
+    <Compile Include="Classifications\Sweet.js\SweetJsContentTypeDefinition.cs" />
+    <Compile Include="Classifications\WebVTT\WebVttContentTypeDefinition.cs" />
+    <Compile Include="Classifications\WebVTT\WebVttClassificationTypes.cs" />
+    <Compile Include="Classifications\WebVTT\WebVttClassifier.cs" />
+    <Compile Include="Classifications\WebVTT\WebVttClassifierProvider.cs" />
+    <Compile Include="Classifications\RobotsTxt\RobotsTxtClassificationTypes.cs" />
+    <Compile Include="Classifications\RobotsTxt\RobotsTxtClassifier.cs" />
+    <Compile Include="Classifications\RobotsTxt\RobotsTxtClassifierProvider.cs" />
+    <Compile Include="Classifications\Markdown\MarkdownClassificationTypes.cs" />
+    <Compile Include="Classifications\Markdown\MarkdownClassifier.cs" />
+    <Compile Include="Classifications\Markdown\MarkdownContentTypeDefinition.cs" />
+    <Compile Include="Classifications\CSS\ModernizrClassifier.cs" />
+    <Compile Include="Classifications\SVG\SvgContentTypeDefinition.cs" />
+    <Compile Include="Commands\AppCache\AppCacheCreationListener.cs" />
+    <Compile Include="Commands\CoffeeScript\CoffeeScriptCreationListener.cs" />
+    <Compile Include="Commands\IFileSaveListener.cs" />
+    <Compile Include="Commands\JavaScript\CommentIndentationCommandTarget.cs" />
+    <Compile Include="Commands\JavaScript\CommentCompletionCommandTarget.cs" />
+    <Compile Include="Commands\Sweet.js\SweetJsCreationListener.cs" />
+    <Compile Include="Commands\TypeScript\TypeScriptFindReferencesCommandTarget.cs" />
+    <Compile Include="Commands\TypeScript\TypeScriptCreationListener.cs" />
+    <Compile Include="Compilers\CompilationChainer.cs" />
+    <Compile Include="Compilers\CssCompilerBase.cs" />
+    <Compile Include="Compilers\Lint\CoffeeLintCompiler.cs" />
+    <Compile Include="Compilers\Lint\LintConfigEncodingFix.cs" />
+    <Compile Include="Commands\LintFileInvoker.cs" />
+    <Compile Include="Commands\LintReporter.cs" />
+    <Compile Include="Compilers\CompilerNotifierProviders.cs" />
+    <Compile Include="Compilers\EditorCompilerInvoker.cs" />
+    <Compile Include="Compilers\Lint\JsCodeStyleCompiler.cs" />
+    <Compile Include="Compilers\Lint\TsLintCompiler.cs" />
+    <Compile Include="Compilers\ProjectCompiler.cs" />
+    <Compile Include="Compilers\Sweet.js\SweetJsCompiler.cs" />
+    <Compile Include="ExtensionMethods\DispatcherPriorityAwaitable.cs" />
+    <Compile Include="ExtensionMethods\DispatcherPriorityAwaiter.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="Helpers\DependencyGraph.cs" />
+    <Compile Include="MenuItems\JsCodeStyle.cs" />
+    <Compile Include="MenuItems\ChainCompilation.cs" />
+    <Compile Include="MenuItems\SpriteImage.cs" />
+    <Compile Include="Compilers\Compilation Interfaces.cs" />
+    <Compile Include="Compilers\CompilerRunner.cs" />
+    <Compile Include="Helpers\Mef.cs" />
+    <Compile Include="Margin\TextViewMargin.cs" />
+    <Compile Include="MenuItems\CompressImage.cs" />
+    <Compile Include="MenuItems\CoffeeLint.cs" />
+    <Compile Include="MenuItems\TsLint.cs" />
+    <Compile Include="Optimization\Compression\CompressionResult.cs" />
+    <Compile Include="Optimization\Compression\ImageCompressor.cs" />
+    <Compile Include="Optimization\Minification\IFileMinifier.cs" />
+    <Compile Include="Optimization\Minification\MinificationSaveListener.cs" />
+    <Compile Include="Optimization\Sprite\ExportFormat.cs" />
+    <Compile Include="Optimization\Sprite\SpriteGenerator.cs" />
+    <Compile Include="Optimization\Sprite\SpriteDocument.cs" />
+    <Compile Include="Optimization\Sprite\SpriteFragment.cs" />
+    <Compile Include="Optimization\Sprite\SpriteExporter.cs" />
+    <Compile Include="SmartTags\CSS\Actions\OptimizeImageSmartTagAction.cs" />
+    <Compile Include="SmartTags\CSS\Providers\OptimizeImageSmartTagProvider.cs" />
+    <Compile Include="Settings\OptionPages.cs">
+      <SubType>component</SubType>
+    </Compile>
+    <Compile Include="Settings\SettingsStore.cs" />
+    <Compile Include="Settings\WESettings.cs" />
+    <Compile Include="SmartTags\HTML\RemoteDownloaderSmartTag.cs" />
+    <Compile Include="SmartTags\HTML\OptimizeImageSmartTag.cs" />
+    <Compile Include="Commands\Shared\PasteImageCommandTarget.cs" />
+    <Compile Include="Commands\Shared\WebEditorsCreationListener.cs" />
+    <Compile Include="Commands\TypeScript\TypeScriptSmartIndentCommandTarget.cs" />
+    <Compile Include="Commands\TypeScript\TypeScriptTypeThroughControllerProvider.cs" />
+    <Compile Include="Commands\TypeScript\TypeThroughController.cs" />
+    <Compile Include="Commands\WebVTT\WebVttCreationListener.cs" />
+    <Compile Include="Commands\Shared\CommentCommandTarget.cs" />
+    <Compile Include="Commands\CoffeeScript\EnterIndentationCommandTarget.cs" />
+    <Compile Include="Commands\Code\IntellisenseObject.cs" />
+    <Compile Include="Commands\Code\IntellisenseParser.cs" />
+    <Compile Include="Commands\Code\IntellisenseProperty.cs" />
+    <Compile Include="Commands\Code\IntellisenseType.cs" />
+    <Compile Include="Commands\CommandExceptionFilter.cs" />
+    <Compile Include="Compilers\Lint\JsHintCompiler.cs" />
+    <Compile Include="Compilers\LESS\LessCompiler.cs" />
+    <Compile Include="Compilers\SASS\SassCompiler.cs" />
+    <Compile Include="Completion\CSS\CompletionProviders\MediaTypeCompletionProvider.cs" />
+    <Compile Include="Completion\CSS\CompletionProviders\MediaValueCompletionProvider.cs" />
+    <Compile Include="Completion\CSS\CompletionProviders\MediaCompletionProvider.cs" />
+    <Compile Include="Completion\CSS\CompletionProviders\VariableNameCompletionProvider.cs" />
+    <Compile Include="Completion\CSS\ContextProviders\MediaQueryContextProvider.cs" />
+    <Compile Include="Completion\CSS\ContextProviders\MediaFeatureContextProvider.cs" />
+    <Compile Include="Completion\CSS\ContextProviders\VariableContextProvider.cs" />
+    <Compile Include="Completion\HTML\InputIdAttributeCompletion.cs" />
+    <Compile Include="Completion\JavaScript\JsDocCompletionSource.cs" />
+    <Compile Include="Completion\Markdown\MarkdownCompletionFilter.cs" />
+    <Compile Include="DropTargets\HtmlImageDrop.cs" />
+    <Compile Include="Helpers\Disposable.cs" />
+    <Compile Include="ExtensionMethods\Extensions.cs" />
+    <Compile Include="Helpers\TabAwareCharacterStream.cs" />
+    <Compile Include="Compilers\CoffeeScript\IcedCoffeeScriptCompiler.cs" />
+    <Compile Include="Compilers\NodeExecutorBase.cs" />
+    <Compile Include="Margin\SvgMargin.cs" />
+    <Compile Include="Compilers\TypeScriptCompilationNotifier.cs" />
+    <Compile Include="MenuItems\AddIntellisenseFile.cs" />
+    <Compile Include="Commands\Code\IntellisenseWriter.cs" />
+    <Compile Include="Commands\Code\ScriptIntellisenseListener.cs" />
+    <Compile Include="Commands\CommandTargetBase.cs" />
+    <Compile Include="Commands\Css\CssSelectBrowsers.cs" />
+    <Compile Include="Commands\Css\CssFormatCommandTarget.cs" />
+    <Compile Include="Commands\Css\F1HelpCommandTarget.cs" />
+    <Compile Include="Commands\Css\CssRemoveDuplicatesCommandTarget.cs" />
+    <Compile Include="Commands\Css\CssAddVendorStandardCommandTarget.cs" />
+    <Compile Include="Commands\Css\CssFindReferencesCommandTarget.cs" />
+    <Compile Include="Commands\HTML\ContractSelectionTarget.cs" />
+    <Compile Include="Commands\HTML\FindAllReferencesCommandTarget.cs" />
+    <Compile Include="Commands\HTML\GoToDefinitionCommandTarget.cs" />
+    <Compile Include="Commands\HTML\HtmlCreationListener.cs" />
+    <Compile Include="Commands\HTML\ExpandSelectionTarget.cs" />
+    <Compile Include="Commands\HTML\SurroundWithTarget.cs" />
+    <Compile Include="Commands\HTML\EnterFormatCommandTarget.cs" />
+    <Compile Include="Commands\HTML\ZenCodingCommandTarget.cs" />
+    <Compile Include="Commands\JavaScript\ReferenceTagGoToDefinition.cs" />
+    <Compile Include="Commands\JavaScript\NodeModuleGoToDefinition.cs" />
+    <Compile Include="Commands\JavaScript\JavaScriptCreationListener.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\JavaScript\JavaScriptFindReferencesCommandTarget.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\JavaScript\JavaScriptLintReporter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\LESS\LessExtractMixinCommandTarget.cs" />
+    <Compile Include="Commands\LESS\LessExtractVariableCommandTarget.cs" />
+    <Compile Include="Commands\LESS\LessCreationListener.cs" />
+    <Compile Include="Commands\Shared\RemoveEmptyLinesCommandTarget.cs" />
+    <Compile Include="Commands\Shared\RemoveDuplicateLinesCommandTarget.cs" />
+    <Compile Include="Commands\Shared\SortSelectedLinesCommandTarget.cs" />
+    <Compile Include="Commands\Shared\EncodeSelectionCommandTarget.cs" />
+    <Compile Include="Commands\Shared\TextCreationListener.cs" />
+    <Compile Include="Commands\Shared\MinifySelectionCommandTarget.cs" />
+    <Compile Include="Commands\Css\CssAddMissingStandardCommandTarget.cs" />
+    <Compile Include="Commands\Css\CssExtractToFileCommandTarget.cs" />
+    <Compile Include="Commands\Css\CssCreationListener.cs" />
+    <Compile Include="Commands\Css\CssSortPropertiesCommandTarget.cs" />
+    <Compile Include="Classifications\CSS\Base64TaggerProvider.cs" />
+    <Compile Include="Classifications\CSS\CssHighlightWordTagger.cs" />
+    <Compile Include="Classifications\CSS\ValueTaggerProvider.cs" />
+    <Compile Include="Classifications\CSS\VendorClassifier.cs" />
+    <Compile Include="Commands\Css\RetriggerCommandTarget.cs" />
+    <Compile Include="Completion\CSS\CompletionListEntry.cs" />
+    <Compile Include="Completion\CSS\CompletionProviders\ClassCompletionProvider.cs" />
+    <Compile Include="Completion\CSS\CompletionProviders\AnimationNameCompletionProvider.cs" />
+    <Compile Include="Completion\CSS\CompletionProviders\ColorCompletionProvider.cs" />
+    <Compile Include="Completion\CSS\CompletionProviders\FontFamilyCompletionProvider.cs" />
+    <Compile Include="Completion\CSS\CompletionProviders\AttributeValueCompletionProvider.cs" />
+    <Compile Include="Completion\CSS\CompletionProviders\RegionCompletionProvider.cs" />
+    <Compile Include="Completion\CSS\CompletionProviders\ImportantCompletionProvider.cs" />
+    <Compile Include="Completion\CSS\CompletionProviders\FontCompletionProvider.cs" />
+    <Compile Include="Completion\CSS\CompletionProviders\AttributeNameCompletionProvider.cs" />
+    <Compile Include="Completion\CSS\CompletionProviders\UrlPickerCompletionProvider.cs" />
+    <Compile Include="Completion\CSS\CompletionProviders\IdCompletionProvider.cs" />
+    <Compile Include="Completion\CSS\CompletionProviders\TagCompletionProvider.cs" />
+    <Compile Include="Completion\CSS\ContextProviders\ClassContextProvider.cs" />
+    <Compile Include="Completion\CSS\ContextProviders\AttributeValueContextCompletionProvider.cs" />
+    <Compile Include="Completion\CSS\ContextProviders\LessPseudoContextProvider.cs" />
+    <Compile Include="Completion\CSS\ContextProviders\AttributeNameContextProvider.cs" />
+    <Compile Include="Completion\CSS\ContextProviders\UrlPickerContextProvider.cs" />
+    <Compile Include="Completion\CSS\ContextProviders\IdContextProvider.cs" />
+    <Compile Include="Completion\CSS\ContextProviders\TagContextProvider.cs" />
+    <Compile Include="Completion\CSS\CustomCompletionListEntry.cs" />
+    <Compile Include="Completion\CSS\Filter\GradientCompletionListFilter.cs" />
+    <Compile Include="Completion\CSS\Filter\LessImportOnceCompletionListFilter.cs" />
+    <Compile Include="Completion\HTML\AppleLinkCompletion.cs" />
+    <Compile Include="Completion\HTML\StaticListCompletion.cs" />
+    <Compile Include="Completion\HTML\MiscMetaCompletion.cs" />
+    <Compile Include="Completion\HTML\SimpleHtmlCompletion.cs" />
+    <Compile Include="Completion\HTML\TwitterCardCompletion.cs" />
+    <Compile Include="Completion\HTML\AppleMetaCompletion.cs" />
+    <Compile Include="Completion\HTML\OpenGraphTypeCompletion.cs" />
+    <Compile Include="Completion\HTML\MetaHttpEquivCompletion.cs" />
+    <Compile Include="Completion\HTML\ViewportCompletion.cs" />
+    <Compile Include="Completion\HTML\MsApplicationCompletion.cs" />
+    <Compile Include="Completion\HTML\HtmlDataListCompletion.cs" />
+    <Compile Include="Completion\HTML\HtmlLabelForAttributeCompletion.cs" />
+    <Compile Include="Completion\CSS\RegionCompletionListEntry.cs" />
+    <Compile Include="Completion\CSS\Filter\WebkitScrollbarCompletionListFilter.cs" />
+    <Compile Include="Completion\CSS\Filter\HideUnsupportedCompletionListFilter.cs" />
+    <Compile Include="Completion\CSS\FontFamilyCompletionListEntry.cs" />
+    <Compile Include="Completion\CSS\UrlPickerCompletionListEntry.cs" />
+    <Compile Include="Completion\CSS\Filter\HideInheritInitialCompletionListFilter.cs" />
+    <Compile Include="Completion\JavaScript\HTML CompletionSources.cs" />
+    <Compile Include="Completion\JavaScript\NodeModuleCompletionSourceProvider.cs" />
+    <Compile Include="Completion\JavaScript\UseDirectiveCompletionSource.cs" />
+    <Compile Include="Completion\JavaScript\StringCompletionSource.cs" />
+    <Compile Include="Completion\JavaScript\JavaScriptCompletionSourceProvider.cs" />
+    <Compile Include="Completion\JavaScript\JavaScriptCompletionController.cs" />
+    <Compile Include="Completion\RobotsTxt\RobotsCompletionController.cs" />
+    <Compile Include="Completion\RobotsTxt\RobotsCompletionSource.cs" />
+    <Compile Include="DropTargets\BundleDrop.cs" />
+    <Compile Include="DropTargets\StylesheetDrop.cs" />
+    <Compile Include="DropTargets\FontDrop.cs" />
+    <Compile Include="DropTargets\ImageDrop.cs" />
+    <Compile Include="DropTargets\TypeScriptDrop.cs" />
+    <Compile Include="ExtensionMethods\CssExtensions.cs" />
+    <Compile Include="Helpers\Css\CssTreeWatcher.cs" />
+    <Compile Include="Helpers\Css\CssUrlNormalizer.cs" />
+    <Compile Include="Helpers\FileCache.cs" />
+    <Compile Include="ExtensionMethods\HtmlExtensions.cs" />
+    <Compile Include="Helpers\NodeModuleService.cs" />
+    <Compile Include="Helpers\Css\StyleSheetHelpers.cs" />
+    <Compile Include="Helpers\WindowHelpers.cs" />
+    <Compile Include="MenuItems\ReferenceJs.cs" />
+    <Compile Include="NavigateTo\CSS\CssGoToLineTag.cs" />
+    <Compile Include="NavigateTo\CSS\CssGoToLineProvider.cs" />
+    <Compile Include="Classifications\IconRegistration.cs" />
+    <Compile Include="SmartTags\CSS\Actions\RemoveCssRuleSmartTagAction.cs" />
+    <Compile Include="SmartTags\CSS\Providers\RemoveCssRuleSmartTagProvider.cs" />
+    <Compile Include="SmartTags\HTML\Base64DecodeSmartTag.cs" />
+    <Compile Include="SmartTags\HTML\ExtractToFileSmartTag.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SmartTags\HTML\HtmlAngularControllerSmartTag.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SmartTags\HTML\HtmlMinifyLanguageSmartTag.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SmartTags\HTML\HtmlRemoveParentSmartTag.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Validation\CSS\Filters\VariableCssErrorFilter.cs" />
+    <Compile Include="Validation\CSS\Providers\MediaQuerySyntaxErrorTagProvider.cs" />
+    <Compile Include="Validation\CSS\Providers\UnusedCssTagProvider.cs" />
+    <Compile Include="Validation\HTML\BootstrapClassValidator.cs" />
+    <Compile Include="Validation\HTML\AngularMissingAppValidator.cs" />
+    <Compile Include="Validation\LESS\Filters\LessAmpersandCssErrorFilter.cs" />
+    <Compile Include="Validation\LESS\Filters\LessExtendCssErrorFilter.cs" />
+    <Compile Include="Validation\CSS\Providers\ColorValuesInRangeErrorTagProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Validation\CSS\Providers\MsViewState.cs" />
+    <Compile Include="Validation\CSS\Providers\HoverOrderErrorTagProvider.cs" />
+    <Compile Include="Validation\CSS\Providers\DisplayInlineErrorTagProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Validation\CSS\Providers\DuplicatePropertyErrorTagProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Validation\CSS\Providers\DuplicateSelectorErrorTagProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Validation\CSS\Providers\EmbedImagesErrorTagProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Validation\CSS\Providers\Ie10PrefixErrorTagProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Validation\CSS\Providers\InvalidVendorErrorTagProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Validation\CSS\Providers\MissingStandardDirectiveErrorTagProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Validation\CSS\Providers\MissingVendorDirectiveErrorTagProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Validation\CSS\Providers\MissingVendorErrorTagProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Validation\CSS\Providers\OverQualifiedSelectorErrorTagProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Validation\CSS\Providers\ShorthandErrorTagProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Validation\CSS\Providers\StarSelectorErrorTagProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Validation\CSS\Providers\UnknownTagErrorTagProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Validation\CSS\Providers\VendorOrderErrorTagProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Validation\CSS\Providers\ZeroUnitErrorTagProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Validation\CSS\SelectorErrorTag.cs" />
+    <Compile Include="Validation\CSS\Filters\MsFilterCssErrorFilter.cs" />
+    <Compile Include="Validation\CSS\Filters\MsKeyframesCssErrorFilter.cs" />
+    <Compile Include="ExtensionMethods\AtDirectiveExtensions.cs" />
+    <Compile Include="ExtensionMethods\IVsExtensions.cs" />
+    <Compile Include="Helpers\Css\CssItemAggregator.cs" />
+    <Compile Include="Helpers\Logger.cs" />
+    <Compile Include="Compilers\CoffeeScript\CoffeeScriptCompiler.cs" />
+    <Compile Include="Helpers\FileHelpers.cs" />
+    <Compile Include="Compilers\CompilerResult.cs" />
+    <Compile Include="Margin\MarkdownMargin.cs" />
+    <Compile Include="Helpers\OptionHelpers.cs" />
+    <Compile Include="Margin\MarginBase.cs" />
+    <Compile Include="Margin\EditorMarginFactory.cs" />
+    <Compile Include="MenuItems\BundleFiles.cs" />
+    <Compile Include="MenuItems\BuildMenu.cs" />
+    <Compile Include="MenuItems\Markdown.cs" />
+    <Compile Include="MenuItems\SolutionColors.cs" />
+    <Compile Include="MenuItems\ProjectSettings.cs" />
+    <Compile Include="MenuItems\JsHint.cs" />
+    <Compile Include="MenuItems\MinifyFile.cs" />
+    <Compile Include="MenuItems\Diff.cs" />
+    <Compile Include="MenuItems\Transform.cs" />
+    <Compile Include="NavigateTo\CSS\CssGoToLineProviderFactory.cs" />
+    <Compile Include="Settings\ProjectSettingsTextViewListener.cs" />
+    <Compile Include="QuickInfo\ImageHtml\ImageQuickInfo.cs" />
+    <Compile Include="QuickInfo\ImageHtml\ImageQuickInfoController.cs" />
+    <Compile Include="QuickInfo\ImageHtml\ImageQuickInfoControllerProvider.cs" />
+    <Compile Include="QuickInfo\ImageHtml\ImageQuickInfoSourceProvider.cs" />
+    <Compile Include="QuickInfo\ValueOrder\RemoveCssSignatureHelpSource.cs" />
+    <Compile Include="QuickInfo\ValueOrder\ValueOrderFactory.cs" />
+    <Compile Include="QuickInfo\ValueOrder\ValueOrderSignature.cs" />
+    <Compile Include="QuickInfo\ValueOrder\ValueOrderSignatureHelpSource.cs" />
+    <Compile Include="QuickInfo\ValueOrder\ValueOrderSignatureHelpSourceProvider.cs" />
+    <Compile Include="QuickInfo\Selector\SelectorQuickInfo.cs" />
+    <Compile Include="QuickInfo\Selector\SelectorQuickInfoController.cs" />
+    <Compile Include="QuickInfo\Selector\SelectorQuickInfoControllerProvider.cs" />
+    <Compile Include="QuickInfo\Selector\SelectorQuickInfoSourceProvider.cs" />
+    <Compile Include="QuickInfo\Declaration\DeclarationQuickInfo.cs" />
+    <Compile Include="QuickInfo\Declaration\DeclarationQuickInfoController.cs" />
+    <Compile Include="QuickInfo\Declaration\DeclarationQuickInfoControllerProvider.cs" />
+    <Compile Include="QuickInfo\Declaration\DeclarationQuickInfoSourceProvider.cs" />
+    <Compile Include="QuickInfo\Font\FontQuickInfoSourceProvider.cs" />
+    <Compile Include="QuickInfo\Font\FontQuickInfoControllerProvider.cs" />
+    <Compile Include="QuickInfo\Font\FontQuickInfoController.cs" />
+    <Compile Include="QuickInfo\Font\FontQuickInfo.cs" />
+    <Compile Include="QuickInfo\Selector\SelectorSpecificity.cs" />
+    <Compile Include="Schemas\Browsers\BrowserSelector.xaml.cs">
+      <DependentUpon>BrowserSelector.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Schemas\Browsers\BrowserStore.cs" />
+    <Compile Include="Schemas\Browsers\BrowserSchemaFilter.cs" />
+    <Compile Include="Schemas\CSS\ColorPaletteProvider.cs" />
+    <Compile Include="Schemas\CSS\CssSchemaUpdater.cs" />
+    <Compile Include="Schemas\CSS\ModernizrProvider.cs" />
+    <Compile Include="Schemas\CSS\XmlColorPaletteProvider.cs" />
+    <Compile Include="SmartTags\CSS\Actions\LessExtractVariableSmartTagAction.cs" />
+    <Compile Include="SmartTags\CSS\Actions\SortSmartTagAction.cs" />
+    <Compile Include="SmartTags\CSS\Actions\UpdateEmbedSmartTagAction.cs" />
+    <Compile Include="SmartTags\CSS\Actions\MissingStandardDirectiveSmartTagAction.cs" />
+    <Compile Include="SmartTags\CSS\Actions\VendorDirectiveSmartTagAction.cs" />
+    <Compile Include="SmartTags\CSS\Actions\OverQualifySelectorSmartTagAction.cs" />
+    <Compile Include="SmartTags\CSS\Providers\LessExtractVariableSmartTagProvider.cs" />
+    <Compile Include="SmartTags\CSS\Providers\SortSmartTagProvider.cs" />
+    <Compile Include="Validation\CSS\Filters\CustomCssErrorFilter.cs" />
+    <Compile Include="Commands\Css\ArrowsCommandTarget.cs" />
+    <Compile Include="Validation\CSS\SimpleErrorTag.cs" />
+    <Compile Include="ExtensionMethods\ColorModelExtensions.cs" />
+    <Compile Include="ExtensionMethods\DeclarationExtensions.cs" />
+    <Compile Include="Helpers\ProjectHelpers.cs" />
+    <Compile Include="Helpers\Css\VendorHelpers.cs" />
+    <Compile Include="QuickInfo\Image\ImageQuickInfo.cs" />
+    <Compile Include="QuickInfo\Image\ImageQuickInfoControllerProvider.cs" />
+    <Compile Include="QuickInfo\Image\ImageQuickInfoController.cs" />
+    <Compile Include="QuickInfo\Image\ImageQuickInfoSourceProvider.cs" />
+    <Compile Include="SmartTags\CSS\Actions\ColorConverterSmartTagAction.cs" />
+    <Compile Include="SmartTags\CSS\Actions\VendorOrderSmartTagAction.cs" />
+    <Compile Include="SmartTags\CSS\Actions\MissingStandardSmartTagAction.cs" />
+    <Compile Include="SmartTags\CSS\Actions\RemoveSelectorHackSmartTagAction.cs" />
+    <Compile Include="SmartTags\CSS\Actions\VendorSmartTagAction.cs" />
+    <Compile Include="SmartTags\CSS\Actions\SelectorHackSmartTagAction.cs" />
+    <Compile Include="SmartTags\CSS\Actions\ReverseEmbedSmartTagAction.cs" />
+    <Compile Include="SmartTags\CSS\CssSmartTagActionBase.cs" />
+    <Compile Include="SmartTags\CSS\ICssSmartTagProvider.cs" />
+    <Compile Include="SmartTags\CSS\Providers\ColorConverterSmartTagProvider.cs" />
+    <Compile Include="SmartTags\CSS\Providers\UpdateEmbedSmartTagProvider.cs" />
+    <Compile Include="SmartTags\CSS\Providers\MissingStandardDirectiveSmartTagProvider.cs" />
+    <Compile Include="SmartTags\CSS\Providers\MissingVendorDirectiveSmartTagProvider.cs" />
+    <Compile Include="SmartTags\CSS\Providers\OverQualifiedSelectorSmartTagProvider.cs" />
+    <Compile Include="SmartTags\CSS\Providers\VendorOrderSmartTagProvider.cs" />
+    <Compile Include="SmartTags\CSS\Providers\MissingVendorSmartTagProvider.cs" />
+    <Compile Include="SmartTags\CSS\Providers\SelectorHackSmartTagProvider.cs" />
+    <Compile Include="SmartTags\CSS\Providers\ReverseEmbedSmartTagProvider.cs" />
+    <Compile Include="SmartTags\CSS\Providers\EmbedSmartTagProvider.cs" />
+    <Compile Include="Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="EditorExtensionsPackage.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CommandConstants.cs" />
+    <Compile Include="SmartTags\CSS\CssSmartTagProvider.cs" />
+    <Compile Include="SmartTags\CSS\CssSmartTag.cs" />
+    <Compile Include="SmartTags\CSS\Actions\EmbedSmartTagAction.cs" />
+    <Compile Include="SmartTags\CSS\CssSmartTagger.cs" />
+    <Compile Include="Helpers\Css\CssItemCollector.cs" />
+    <Compile Include="Settings\LegacySettings.cs" />
+    <Compile Include="Validation\HTML\OpenGraphPrefixValidator.cs" />
+    <Compile Include="Validation\HTML\ItemTypeValidator.cs" />
+    <Compile Include="Validation\LESS\Providers\ImportOnceErrorTagProvider.cs" />
+    <Compile Include="Validation\SASS\Filters\SassErrorFilter.cs" />
+    <None Include="PreBuildTask.cs" />
+    <Content Include="Resources\Icons\Bundle.ico">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\Icons\Font.ico">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\Icons\GenericScript.ico">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\Icons\Git.ico">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\Icons\Jigsaw.ico">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\Icons\WebVTT.ico">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\Icons\CoffeeScript.ico">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\Icons\Markdown.ico">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\Images\preview.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\Images\WebEssentials2012logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\Tools\gifsicle.exe">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\Tools\jpegtran.exe">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\Tools\optipng.exe">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\Tools\pngout.exe">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippets\snippets.pkgdef">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippets\CSS\Web Essentials\media query desktop laptop.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippets\CSS\Web Essentials\media query ipad landscape.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippets\CSS\Web Essentials\media query ipad portrait.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippets\CSS\Web Essentials\media query ipad.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippets\CSS\Web Essentials\media query iphone 4 landscape.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippets\CSS\Web Essentials\media query iphone 4 portrait.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippets\CSS\Web Essentials\media query iphone 4.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippets\CSS\Web Essentials\media query iphone 5 landscape.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippets\CSS\Web Essentials\media query iphone 5 portrait.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippets\CSS\Web Essentials\media query iphone 5.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippets\CSS\Web Essentials\media query large screen.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippets\CSS\Web Essentials\media query smartphone landscape.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippets\CSS\Web Essentials\media query smartphone portrait.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippets\CSS\Web Essentials\media query smartphone.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Snippets\CSS\Web Essentials\media query windows snap view.snippet">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VSPackage.resx">
+      <MergeWithCTO>true</MergeWithCTO>
+      <ManifestResourceName>VSPackage</ManifestResourceName>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BrowserLink\UnusedCss\UnusedCss.js" />
+    <EmbeddedResource Include="BrowserLink\PixelPushing\PixelPushingModeBrowserLink.js" />
+    <EmbeddedResource Include="BrowserLink\Menu\MenuBrowserLink.js" />
+    <Content Include="Classifications\RobotsTxt\robots.txt" />
+    <None Include="Classifications\Markdown\Sample.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <VSCTCompile Include="EditorExtensions.vsct">
+      <ResourceName>Menus.ctmenu</ResourceName>
+      <SubType>Designer</SubType>
+    </VSCTCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\Images\Images.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BrowserLink\CssSync\CssSyncBrowserLink.js" />
+    <EmbeddedResource Include="BrowserLink\InspectMode\InspectModeBrowserLink.js" />
+    <None Include="BrowserLink\_intellisense\browserlink.intellisense.js" />
+    <None Include="BrowserLink\_intellisense\jquery-1.8.2.intellisense.js" />
+    <None Include="BrowserLink\_intellisense\jquery-1.8.2.js" />
+    <EmbeddedResource Include="BrowserLink\DesignMode\DesignModeBrowserLink.js" />
+    <EmbeddedResource Include="BrowserLink\BestPractices\BestPracticesBrowserLink.js" />
+    <CodeAnalysisDictionary Include="CustomDictionary.xml">
+      <SubType>Designer</SubType>
+    </CodeAnalysisDictionary>
+    <Resource Include="Resources\Images\numbers.png" />
+    <Content Include="registry.pkgdef">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Resource Include="Resources\Images\extract.png" />
+    <EmbeddedResource Include="Resources\Scripts\AngularController.js" />
+    <Resource Include="Resources\Images\delete.png" />
+    <Resource Include="Resources\Images\browserlink.png" />
+    <Resource Include="Resources\Images\node_module.png" />
+    <Resource Include="Resources\Images\jsfile.png" />
+    <Resource Include="Resources\Images\jsonfile.png" />
+    <None Include="Resources\Images\Browser Pause Button.png" />
+    <None Include="Resources\Images\Browser Record Button.png" />
+    <Content Include="Resources\nodejs\node.exe">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\settings-defaults\.jshintrc">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\settings-defaults\tslint.json">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\settings-defaults\coffeelint.json">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\settings-defaults\.jscs.json">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\Scripts\jshint-node-reporter.js">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\Scripts\tslintFormatter.js">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\Scripts\jscs-node-reporter.js">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Resource Include="Resources\Images\graph_id.png" />
+    <Resource Include="Resources\Images\graph_atdir.png" />
+    <Resource Include="Resources\Images\graph_class.png" />
+    <Resource Include="Resources\Images\graph_parent.png" />
+    <Resource Include="Resources\Images\sort.png" />
+    <Content Include="Resources\Tools\png.cmd">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <None Include="Source.extension.vsixmanifest" />
+    <Resource Include="Resources\Images\vsgallery.png" />
+    <Content Include="Schemas\CSS\css-we-settings.xml">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Schemas\CSS\WE-Palette.css">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Resource Include="Resources\Images\Browsers\s.png" />
+    <Resource Include="Resources\Images\warning.png" />
+    <Resource Include="Resources\Images\palette.png" />
+    <Resource Include="Resources\Images\skull.png" />
+    <Resource Include="Resources\Images\embed.png" />
+    <Resource Include="Resources\Images\nopreview.png" />
+    <Resource Include="Resources\Images\cross_browser.png" />
+    <Resource Include="Resources\Images\no_skull.png" />
+    <Resource Include="Resources\Images\alphabatize.png" />
+    <Resource Include="Resources\Images\Browsers\ie.png" />
+    <Resource Include="Resources\Images\Browsers\o.png" />
+    <Resource Include="Resources\Images\Browsers\c.png" />
+    <Resource Include="Resources\Images\Browsers\ff.png" />
+    <Resource Include="Resources\Images\Browsers\c_gray.png" />
+    <Resource Include="Resources\Images\Browsers\ff_gray.png" />
+    <Resource Include="Resources\Images\Browsers\ie_gray.png" />
+    <Resource Include="Resources\Images\Browsers\o_gray.png" />
+    <Resource Include="Resources\Images\Browsers\s_gray.png" />
+    <Content Include="License.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\Images\Package.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Schemas\Browsers\BrowserSelector.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <UseCodebase>true</UseCodebase>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets" Condition="'$(VSToolsPath)' != ''" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <UsingTask TaskName="MadsKristensen.EditorExtensions.PreBuildTask" TaskFactory="CodeTaskFactory" AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.v12.0.dll">
+    <Task>
+      <Reference Include="Microsoft.CSharp" />
+      <Reference Include="System.IO.Compression" />
+      <Reference Include="System.IO.Compression.FileSystem" />
+      <Reference Include="System.Web.Helpers" />
+      <Code Language="cs" Source="PreBuildTask.cs" />
+    </Task>
+  </UsingTask>
+  <Target Name="BeforeBuild">
+    <MadsKristensen.EditorExtensions.PreBuildTask />
+    <!-- Include newly downloaded files now ... -->
+    <ItemGroup>
+      <!-- Exclude LESS & SASS because they have too many extra files; usea whitelist instead-->
+      <!-- Mocha comes from some package that forgot about "devDependencies"; Jade comes from Mocha -->
+      <Content Include="Resources\nodejs\tools\**" Exclude="&#xD;&#xA; **\node-sass\**; **\less\**; &#xD;&#xA;               **\mocha\**; **\jade\**; &#xD;&#xA;               **\*.md; **\*.markdown; **\*.html; **\*.txt; **\LICENSE; **\README; **\CHANGELOG; **\CNAME; **\*.old; **\*.patch; **\*.ico; &#xD;&#xA;               **\*.json; **\.*; **\Makefile.*; **\Rakefile; **\*.yml; &#xD;&#xA;               **\test.*; **\generate-*; &#xD;&#xA;               **\*.min.js; **\*-min.js; &#xD;&#xA;               **\media\**; **\images\**; **\man\**; &#xD;&#xA;               **\.bin\**; **\benchmark\**; **\build\**; **\scripts\**; &#xD;&#xA;               **\vendor\**; &#xD;&#xA;               **\test\**; **\tst\**; **\tests\**; **\testing\**; &#xD;&#xA;               **\examples\**; **\example\**; **\tools\**\tools\**">
+        <IncludeInVSIX>true</IncludeInVSIX>
+      </Content>
+      <Content Include="Resources\nodejs\tools\node_modules\node-sass\sass.js; Resources\nodejs\tools\node_modules\node-sass\bin\node-sass; Resources\nodejs\tools\node_modules\node-sass\lib\**; Resources\nodejs\tools\node_modules\node-sass\bin\win32-ia32-*\**; Resources\nodejs\tools\node_modules\tslint\**; Resources\nodejs\tools\node_modules\jscs\**; Resources\nodejs\tools\node_modules\coffeelint\**">
+        <IncludeInVSIX>true</IncludeInVSIX>
+      </Content>
+      <Content Include="Resources\nodejs\tools\node_modules\less\lib\**; Resources\nodejs\tools\node_modules\less\bin\**">
+        <IncludeInVSIX>true</IncludeInVSIX>
+      </Content>
+      <!-- Explicitly include JSON files that are actually needed at runtime-->
+      <Content Include="Resources\nodejs\tools\node_modules\htmlparser2\lib\entities\**; Resources\nodejs\tools\node_modules\jshint\package.json; Resources\nodejs\tools\node_modules\resolve\lib\core.json; Resources\nodejs\tools\node_modules\escodegen\package.json;">
+        <IncludeInVSIX>true</IncludeInVSIX>
+      </Content>
+    </ItemGroup>
+  </Target>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+</Project>
