@@ -1,4 +1,0 @@
-{
-    "eqeqeq"        : false,     // true: Require triple equals (===) for comparison
-    "undef"         : false      // true: Require all non-global variables to be declared (prevents global leaks)
-}
