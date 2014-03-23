@@ -17,14 +17,14 @@
       <Menu guid="guidEditorExtensionsCmdSet" id="SubMenu" priority="0x001" type="Menu">
         <Parent guid="guidEditorLinesCmdSet" id="LinesTopMenuGroup" />
         <Strings>
-          <ButtonText>Encode Selection</ButtonText>
+          <ButtonText>编码选择</ButtonText>
         </Strings>
       </Menu>
       <Menu guid="guidEditorExtensionsCmdSet" id="TransformSubMenu" priority="0x001" type="Menu">
         <Parent guid="guidEditorLinesCmdSet" id="LinesTopMenuGroup" />
         <Strings>
-          <ButtonText>Transform Selection</ButtonText>
-          <CommandName>Transform Selection</CommandName>
+          <ButtonText>变换选区</ButtonText>
+          <CommandName>变换选区</CommandName>
         </Strings>
       </Menu>
       <Menu guid="guidCssIntellisenseCmdSet" id="CssIntellisenseSubMenu" priority="0x201" type="Menu">
@@ -46,7 +46,7 @@
         <Parent guid="guidEditorLinesCmdSet" id="LinesTopMenuGroup" />
         <CommandFlag>DynamicVisibility</CommandFlag>
         <Strings>
-          <ButtonText>Selected Lines</ButtonText>
+          <ButtonText>所选的行</ButtonText>
         </Strings>
       </Menu>
     </Menus>
@@ -151,7 +151,7 @@
         <CommandFlag>DynamicVisibility</CommandFlag>
         <CommandFlag>DefaultDisabled</CommandFlag>
         <Strings>
-          <ButtonText>HTML Encode</ButtonText>
+          <ButtonText>HTML 编码</ButtonText>
         </Strings>
       </Button>
 
@@ -160,7 +160,7 @@
         <CommandFlag>DynamicVisibility</CommandFlag>
         <CommandFlag>DefaultDisabled</CommandFlag>
         <Strings>
-          <ButtonText>HTML Attribute Encode</ButtonText>
+          <ButtonText>HTML 属性编码</ButtonText>
         </Strings>
       </Button>
 
@@ -169,7 +169,7 @@
         <CommandFlag>DynamicVisibility</CommandFlag>
         <CommandFlag>DefaultDisabled</CommandFlag>
         <Strings>
-          <ButtonText>HTML Decode</ButtonText>
+          <ButtonText>HTML 解码</ButtonText>
         </Strings>
       </Button>
 
@@ -178,7 +178,7 @@
         <CommandFlag>DynamicVisibility</CommandFlag>
         <CommandFlag>DefaultDisabled</CommandFlag>
         <Strings>
-          <ButtonText>URL Encode</ButtonText>
+          <ButtonText>URL 编码</ButtonText>
         </Strings>
       </Button>
 
@@ -187,7 +187,7 @@
         <CommandFlag>DynamicVisibility</CommandFlag>
         <CommandFlag>DefaultDisabled</CommandFlag>
         <Strings>
-          <ButtonText>URL Decode</ButtonText>
+          <ButtonText>URL 解码</ButtonText>
         </Strings>
       </Button>
 
@@ -196,7 +196,7 @@
         <CommandFlag>DynamicVisibility</CommandFlag>
         <CommandFlag>DefaultDisabled</CommandFlag>
         <Strings>
-          <ButtonText>JavaScript String Encode</ButtonText>
+          <ButtonText>JavaScript 字符串编码</ButtonText>
         </Strings>
       </Button>
 
@@ -204,7 +204,7 @@
         <Parent guid="guidEditorExtensionsCmdSet" id="CasingTransformMenuGroup" />
         <CommandFlag>DynamicVisibility</CommandFlag>
         <Strings>
-          <ButtonText>To Title Case</ButtonText>
+          <ButtonText>首字母大写</ButtonText>
         </Strings>
       </Button>
 
@@ -212,7 +212,7 @@
         <Parent guid="guidEditorExtensionsCmdSet" id="MiscTransformMenuGroup" />
         <CommandFlag>DynamicVisibility</CommandFlag>
         <Strings>
-          <ButtonText>Reverse</ButtonText>
+          <ButtonText>反向</ButtonText>
         </Strings>
       </Button>
 
@@ -220,7 +220,7 @@
         <Parent guid="guidEditorExtensionsCmdSet" id="MiscTransformMenuGroup" />
         <CommandFlag>DynamicVisibility</CommandFlag>
         <Strings>
-          <ButtonText>Remove Diacritics</ButtonText>
+          <ButtonText>删除变音符</ButtonText>
         </Strings>
       </Button>
 
@@ -270,7 +270,7 @@
         <CommandFlag>DynamicVisibility</CommandFlag>
         <CommandFlag>DefaultDisabled</CommandFlag>
         <Strings>
-          <ButtonText>Sort Selection Lines Ascending</ButtonText>
+          <ButtonText>升序排序选定行</ButtonText>
         </Strings>
       </Button>
 
@@ -279,7 +279,7 @@
         <CommandFlag>DynamicVisibility</CommandFlag>
         <CommandFlag>DefaultDisabled</CommandFlag>
         <Strings>
-          <ButtonText>Sort Selection Lines Descending</ButtonText>
+          <ButtonText>降序排序选定行</ButtonText>
         </Strings>
       </Button>
 
@@ -288,7 +288,7 @@
         <CommandFlag>DynamicVisibility</CommandFlag>
         <CommandFlag>DefaultDisabled</CommandFlag>
         <Strings>
-          <ButtonText>Remove Duplicate Lines</ButtonText>
+          <ButtonText>删除重复行</ButtonText>
         </Strings>
       </Button>
       <Button guid="guidEditorLinesCmdSet" id="RemoveEmptyLines" priority="0x0106" type="Button">
@@ -296,7 +296,7 @@
         <CommandFlag>DynamicVisibility</CommandFlag>
         <CommandFlag>DefaultDisabled</CommandFlag>
         <Strings>
-          <ButtonText>Remove Empty Lines</ButtonText>
+          <ButtonText>删除空行</ButtonText>
         </Strings>
       </Button>
 
@@ -305,7 +305,7 @@
         <Icon guid="guidNumbers" id="pic1"/>
         <CommandFlag>DynamicVisibility</CommandFlag>
         <Strings>
-          <ButtonText>Remove Duplicate Properties</ButtonText>
+          <ButtonText>删除重复属性</ButtonText>
         </Strings>
       </Button>
 
@@ -314,7 +314,7 @@
         <Icon guid="guidNumbers" id="pic2"/>
         <CommandFlag>DynamicVisibility</CommandFlag>
         <Strings>
-          <ButtonText>Add Missing Standard Properties</ButtonText>
+          <ButtonText>添加缺失的标准属性</ButtonText>
         </Strings>
       </Button>
 
@@ -323,7 +323,7 @@
         <Icon guid="guidNumbers" id="pic3"/>
         <CommandFlag>DynamicVisibility</CommandFlag>
         <Strings>
-          <ButtonText>Add Missing Vendor Specifics</ButtonText>
+          <ButtonText>添加缺失的供应商详情</ButtonText>
         </Strings>
       </Button>
 
@@ -332,7 +332,7 @@
         <Icon guid="guidNumbers" id="pic4"/>
         <CommandFlag>DynamicVisibility</CommandFlag>
         <Strings>
-          <ButtonText>Sort All Properties</ButtonText>
+          <ButtonText>排序所有属性</ButtonText>
         </Strings>
       </Button>
 
@@ -341,8 +341,8 @@
         <Icon guid="guidImages" id="bmpLogo"/>
         <CommandFlag>DynamicVisibility</CommandFlag>
         <Strings>
-          <CommandName>Minify Selection</CommandName>
-          <ButtonText>Minify selection</ButtonText>
+          <CommandName>压缩选定项</CommandName>
+          <ButtonText>压缩选定项</ButtonText>
         </Strings>
       </Button>
 
@@ -350,8 +350,8 @@
         <Parent guid="guidExtractCmdSet" id="MyMenuGroup" />
         <CommandFlag>DynamicVisibility</CommandFlag>
         <Strings>
-          <CommandName>Extract To File</CommandName>
-          <ButtonText>Extract to file...</ButtonText>
+          <CommandName>提取到文件</CommandName>
+          <ButtonText>提取到文件...</ButtonText>
         </Strings>
       </Button>
 
@@ -360,8 +360,8 @@
         <CommandFlag>DynamicVisibility</CommandFlag>
         <CommandFlag>DefaultDisabled</CommandFlag>
         <Strings>
-          <CommandName>Extract To Variable</CommandName>
-          <ButtonText>Extract to variable...</ButtonText>
+          <CommandName>提取到变量</CommandName>
+          <ButtonText>提取到变量...</ButtonText>
         </Strings>
       </Button>
 
@@ -370,8 +370,8 @@
         <CommandFlag>DynamicVisibility</CommandFlag>
         <CommandFlag>DefaultDisabled</CommandFlag>
         <Strings>
-          <CommandName>Extract To Mixin</CommandName>
-          <ButtonText>Extract to mixin...</ButtonText>
+          <CommandName>提取到混合</CommandName>
+          <ButtonText>提取到混合...</ButtonText>
         </Strings>
       </Button>
 
@@ -379,8 +379,8 @@
         <Parent guid="guidCssCmdSet" id="CssMinifyMenuGroup" />
         <CommandFlag>DynamicVisibility</CommandFlag>
         <Strings>
-          <CommandName>Select Browsers</CommandName>
-          <ButtonText>Select browsers...</ButtonText>
+          <CommandName>选择浏览器</CommandName>
+          <ButtonText>选择浏览器...</ButtonText>
         </Strings>
       </Button>
 
@@ -388,7 +388,7 @@
         <Parent guid="guidTopMenu" id="SolutionSubMenuGroup" />
         <CommandFlag>DynamicVisibility</CommandFlag>
         <Strings>
-          <ButtonText>Create solution settings</ButtonText>
+          <ButtonText>创建解决方案设置</ButtonText>
         </Strings>
       </Button>
 
@@ -396,7 +396,7 @@
         <Parent guid="guidTopMenu" id="SolutionSubMenuGroup" />
         <Icon guid="guidMenuImages" id="bmpScript"/>
         <Strings>
-          <ButtonText>Edit global JSHint settings (.jshintrc)...</ButtonText>
+          <ButtonText>编辑全局 JSHint 设置(.jshintrc)...</ButtonText>
         </Strings>
       </Button>
 
@@ -404,7 +404,7 @@
         <Parent guid="guidTopMenu" id="SolutionSubMenuGroup" />
         <Icon guid="guidMenuImages" id="bmpScript"/>
         <Strings>
-          <ButtonText>Edit global TSLint settings (tslint.json)...</ButtonText>
+          <ButtonText>编辑全局 TSLint 设置(tslint.json)...</ButtonText>
         </Strings>
       </Button>
 
@@ -412,7 +412,7 @@
         <Parent guid="guidTopMenu" id="SolutionSubMenuGroup" />
         <Icon guid="guidMenuImages" id="bmpScript"/>
         <Strings>
-          <ButtonText>Edit global CoffeeLint settings (coffeelint.json)...</ButtonText>
+          <ButtonText>编辑全局 CoffeeLint 设置(coffeelint.json)...</ButtonText>
         </Strings>
       </Button>
 
@@ -420,7 +420,7 @@
         <Parent guid="guidTopMenu" id="SolutionSubMenuGroup" />
         <Icon guid="guidMenuImages" id="bmpScript"/>
         <Strings>
-          <ButtonText>Edit global JSCS settings (.jscs.json)...</ButtonText>
+          <ButtonText>编辑全局 JSCS 设置(.jscs.json)...</ButtonText>
         </Strings>
       </Button>
 
@@ -428,7 +428,7 @@
         <Parent guid="guidTopMenu" id="SolutionSubMenuGroup" />
         <CommandFlag>DynamicVisibility</CommandFlag>
         <Strings>
-          <ButtonText>Create color palette</ButtonText>
+          <ButtonText>创建调色板</ButtonText>
         </Strings>
       </Button>
 
@@ -436,7 +436,7 @@
         <Parent guid="guidTopMenu" id="SolutionSubMenuGroup" />
         <CommandFlag>DynamicVisibility</CommandFlag>
         <Strings>
-          <ButtonText>Add Markdown solution stylesheet</ButtonText>
+          <ButtonText>添加 Markdown 解决方案样式表</ButtonText>
         </Strings>
       </Button>
 
@@ -444,7 +444,7 @@
         <Parent guid="guidDiffCmdSet" id="MarkdownGroup" />
         <CommandFlag>DynamicVisibility</CommandFlag>
         <Strings>
-          <ButtonText>Compile Markdown to HTML</ButtonText>
+          <ButtonText>编译 Markdown 到 HTML</ButtonText>
         </Strings>
       </Button>
 
@@ -452,7 +452,7 @@
         <Parent guid="guidDiffCmdSet" id="MyMenuGroup" />
         <CommandFlag>DynamicVisibility</CommandFlag>
         <Strings>
-          <ButtonText>Diff selected files</ButtonText>
+          <ButtonText>比较所选文件</ButtonText>
         </Strings>
       </Button>
 
@@ -460,7 +460,7 @@
         <Parent guid="guidDiffCmdSet" id="MyMenuGroup" />
         <CommandFlag>DynamicVisibility</CommandFlag>
         <Strings>
-          <ButtonText>Run JSHint</ButtonText>
+          <ButtonText>运行 JSHint</ButtonText>
         </Strings>
       </Button>
 
@@ -468,7 +468,7 @@
         <Parent guid="guidDiffCmdSet" id="MyMenuGroup" />
         <CommandFlag>DynamicVisibility</CommandFlag>
         <Strings>
-          <ButtonText>Run TSLint</ButtonText>
+          <ButtonText>运行 TSLint</ButtonText>
         </Strings>
       </Button>
 
@@ -476,15 +476,15 @@
         <Parent guid="guidDiffCmdSet" id="MyMenuGroup" />
         <CommandFlag>DynamicVisibility</CommandFlag>
         <Strings>
-          <ButtonText>Run CoffeeLint</ButtonText>
+          <ButtonText>运行 CoffeeLint</ButtonText>
         </Strings>
       </Button>
-      
+
       <Button guid="guidDiffCmdSet" id="cmdJsCodeStyle" priority="0x0106" type="Button">
         <Parent guid="guidDiffCmdSet" id="MyMenuGroup" />
         <CommandFlag>DynamicVisibility</CommandFlag>
         <Strings>
-          <ButtonText>Run JSCS</ButtonText>
+          <ButtonText>运行 JSCS</ButtonText>
         </Strings>
       </Button>
 
@@ -493,7 +493,7 @@
         <CommandFlag>DynamicVisibility</CommandFlag>
         <CommandFlag>DefaultDisabled</CommandFlag>
         <Strings>
-          <ButtonText>Create JavaScript Intellisense file</ButtonText>
+          <ButtonText>创建 JavaScript 智能感知文件</ButtonText>
         </Strings>
       </Button>
 
@@ -502,7 +502,7 @@
         <CommandFlag>DynamicVisibility</CommandFlag>
         <CommandFlag>DefaultDisabled</CommandFlag>
         <Strings>
-          <ButtonText>Create TypeScript Intellisense file</ButtonText>
+          <ButtonText>创建 TypeScript 智能感知文件</ButtonText>
         </Strings>
       </Button>
 
@@ -511,7 +511,7 @@
         <Icon guid="guidImages" id="bmpLogo"/>
         <CommandFlag>DynamicVisibility</CommandFlag>
         <Strings>
-          <ButtonText>Minify CSS file(s)</ButtonText>
+          <ButtonText>压缩 CSS 文件</ButtonText>
         </Strings>
       </Button>
 
@@ -520,7 +520,7 @@
         <Icon guid="guidImages" id="bmpLogo"/>
         <CommandFlag>DynamicVisibility</CommandFlag>
         <Strings>
-          <ButtonText>Minify JavaScript file(s)</ButtonText>
+          <ButtonText>压缩 JavaScript 文件</ButtonText>
         </Strings>
       </Button>
 
@@ -529,7 +529,7 @@
         <Icon guid="guidImages" id="bmpLogo"/>
         <CommandFlag>DynamicVisibility</CommandFlag>
         <Strings>
-          <ButtonText>Minify HTML file(s)</ButtonText>
+          <ButtonText>压缩 HTML 文件</ButtonText>
         </Strings>
       </Button>
 
@@ -539,7 +539,7 @@
         <CommandFlag>TextChanges</CommandFlag>
         <CommandFlag>DynamicVisibility</CommandFlag>
         <Strings>
-          <ButtonText>Optimize image(s)</ButtonText>
+          <ButtonText>优化图像</ButtonText>
         </Strings>
       </Button>
 
@@ -548,7 +548,7 @@
         <Icon guid="guidMenuImages" id="bmpJigsaw"/>
         <CommandFlag>DynamicVisibility</CommandFlag>
         <Strings>
-          <ButtonText>Create image sprite...</ButtonText>
+          <ButtonText>创建图片精灵...</ButtonText>
         </Strings>
       </Button>
 
@@ -557,7 +557,7 @@
         <Icon guid="guidMenuImages" id="bmpJigsaw"/>
         <CommandFlag>DynamicVisibility</CommandFlag>
         <Strings>
-          <ButtonText>Update image sprite</ButtonText>
+          <ButtonText>更新图片精灵</ButtonText>
         </Strings>
       </Button>
 
@@ -565,7 +565,7 @@
         <Parent guid="guidSolutionExplorerCmdSet" id="MyBundleGroup"/>
         <CommandFlag>DynamicVisibility</CommandFlag>
         <Strings>
-          <ButtonText>Create JavaScript bundle file</ButtonText>
+          <ButtonText>创建 JavaScript 资源包文件</ButtonText>
         </Strings>
       </Button>
 
@@ -573,7 +573,7 @@
         <Parent guid="guidSolutionExplorerCmdSet" id="MyBundleGroup"/>
         <CommandFlag>DynamicVisibility</CommandFlag>
         <Strings>
-          <ButtonText>Create CSS bundle file</ButtonText>
+          <ButtonText>创建 CSS 资源包文件</ButtonText>
         </Strings>
       </Button>
 
@@ -581,7 +581,7 @@
         <Parent guid="guidSolutionExplorerCmdSet" id="MyBundleGroup"/>
         <CommandFlag>DynamicVisibility</CommandFlag>
         <Strings>
-          <ButtonText>Create HTML bundle file</ButtonText>
+          <ButtonText>创建 HTML 资源包文件</ButtonText>
         </Strings>
       </Button>
 
@@ -589,7 +589,7 @@
         <Parent guid="guidBuildCmdSet" id="MyBuildMenuGroup"/>
         <CommandFlag>DynamicVisibility</CommandFlag>
         <Strings>
-          <ButtonText>Update All Bundles</ButtonText>
+          <ButtonText>更新所有资源包</ButtonText>
         </Strings>
       </Button>
 
@@ -598,7 +598,7 @@
         <Icon guid="guidImages" id="bmpLogo"/>
         <CommandFlag>DynamicVisibility</CommandFlag>
         <Strings>
-          <ButtonText>Re-minify All CSS/JS/HTML Files</ButtonText>
+          <ButtonText>重新压缩所有 CSS/JS/HTML 文件</ButtonText>
         </Strings>
       </Button>
 
@@ -606,7 +606,7 @@
         <Parent guid="guidBuildCmdSet" id="MyCompileMenuGroup"/>
         <CommandFlag>DynamicVisibility</CommandFlag>
         <Strings>
-          <ButtonText>Re-compile All LESS Files</ButtonText>
+          <ButtonText>重新编译所有 LESS 文件</ButtonText>
         </Strings>
       </Button>
 
@@ -614,7 +614,7 @@
         <Parent guid="guidBuildCmdSet" id="MyCompileMenuGroup"/>
         <CommandFlag>DynamicVisibility</CommandFlag>
         <Strings>
-          <ButtonText>Re-compile All SASS Files</ButtonText>
+          <ButtonText>重新编译所有 SASS 文件</ButtonText>
         </Strings>
       </Button>
 
@@ -622,7 +622,7 @@
         <Parent guid="guidBuildCmdSet" id="MyCompileMenuGroup"/>
         <CommandFlag>DynamicVisibility</CommandFlag>
         <Strings>
-          <ButtonText>Re-compile All CoffeeScript Files</ButtonText>
+          <ButtonText>重新编译所有 CoffeeScript 文件</ButtonText>
         </Strings>
       </Button>
 
@@ -630,7 +630,7 @@
         <Parent guid="guidBuildCmdSet" id="MyCompileMenuGroup"/>
         <CommandFlag>DynamicVisibility</CommandFlag>
         <Strings>
-          <ButtonText>Re-compile All Sweet.js Files</ButtonText>
+          <ButtonText>重新编译所有 Sweet.js 文件</ButtonText>
         </Strings>
       </Button>
 
@@ -640,8 +640,8 @@
         <CommandFlag>DefaultDisabled</CommandFlag>
         <CommandFlag>DefaultInvisible</CommandFlag>
         <Strings>
-          <CommandName>Surround With Tag</CommandName>
-          <ButtonText>Surround with tag...</ButtonText>
+          <CommandName>环绕标签</CommandName>
+          <ButtonText>环绕标签...</ButtonText>
         </Strings>
       </Button>
 
@@ -651,7 +651,7 @@
         <CommandFlag>DefaultDisabled</CommandFlag>
         <CommandFlag>DefaultInvisible</CommandFlag>
         <Strings>
-          <ButtonText>Expand Selection</ButtonText>
+          <ButtonText>展开选定项</ButtonText>
         </Strings>
       </Button>
 
@@ -661,7 +661,7 @@
         <CommandFlag>DefaultDisabled</CommandFlag>
         <CommandFlag>DefaultInvisible</CommandFlag>
         <Strings>
-          <ButtonText>Contract Selection</ButtonText>
+          <ButtonText>收缩选定项</ButtonText>
         </Strings>
       </Button>
 
@@ -670,7 +670,7 @@
         <Icon guid="guidBrowserLink" id="bmpRecord"/>
         <CommandFlag>DynamicVisibility</CommandFlag>
         <Strings>
-          <ButtonText>Start Recording (All Browsers)</ButtonText>
+          <ButtonText>开始录制 (所有浏览器)</ButtonText>
         </Strings>
       </Button>
 
@@ -680,21 +680,21 @@
         <CommandFlag>DynamicVisibility</CommandFlag>
         <CommandFlag>DefaultInvisible</CommandFlag>
         <Strings>
-          <ButtonText>Stop Recording (All Browsers)</ButtonText>
+          <ButtonText>停止录制 (所有浏览器)</ButtonText>
         </Strings>
       </Button>
 
       <Button guid="guidUnusedCssCmdSet" id="UnusedCssResetCommandId" priority="0x2003" type="Button">
         <Parent guid="guidBrowserLinkCmdSet" id="IDG_BROWSERLINK_COMMANDS"/>
         <Strings>
-          <ButtonText>Clear CSS Usage Data</ButtonText>
+          <ButtonText>清除 CSS 使用数据</ButtonText>
         </Strings>
       </Button>
 
       <Button guid="guidPixelPushingCmdSet" id="PixelPushingToggleCommandId" priority="0x2010" type="Button">
         <Parent guid="guidBrowserLinkCmdSet" id="IDG_BROWSERLINK_COMMANDS"/>
         <Strings>
-          <ButtonText>Enable Saving F12 Changes</ButtonText>
+          <ButtonText>启用保存 F12 键更改</ButtonText>
         </Strings>
       </Button>
 
@@ -703,7 +703,7 @@
         <CommandFlag>DynamicVisibility</CommandFlag>
         <CommandFlag>DefaultInvisible</CommandFlag>
         <Strings>
-          <ButtonText>_references.js Intellisense file</ButtonText>
+          <ButtonText>_references.js 智能感知文件</ButtonText>
         </Strings>
       </Button>
 
@@ -712,7 +712,7 @@
         <Icon guid="guidImages" id="bmpLogo"/>
         <CommandFlag>DynamicVisibility</CommandFlag>
         <Strings>
-          <ButtonText>Don't auto-compile when saving dependencies</ButtonText>
+          <ButtonText>保存依赖时不自动编译</ButtonText>
         </Strings>
       </Button>-->
     </Buttons>
