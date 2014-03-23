@@ -118,114 +118,114 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="BestPracticeAddMissingStandardDirective" xml:space="preserve">
-    <value>Browser compatibility: Add missing standard directive ({0})</value>
+    <value>浏览器兼容性: 添加缺失的标准指令 ({0})</value>
   </data>
   <data name="BestPracticeAddMissingStandardProperty" xml:space="preserve">
-    <value>Browser compatibility: Add missing standard property ({0})</value>
+    <value>浏览器兼容性: 添加缺失的标准属性 ({0})</value>
   </data>
   <data name="BestPracticeAddMissingVendorSpecific" xml:space="preserve">
-    <value>Browser compatibility: Add missing vendor specific properties to '{0}' ({1})</value>
+    <value>浏览器兼容性: 添加缺失的供应商特定属性到 '{0}' ({1})</value>
   </data>
   <data name="BestPracticeAddMissingVendorSpecificDirective" xml:space="preserve">
-    <value>Browser compatibility: Add missing vendor specific directives to '{0}' ({1})</value>
+    <value>浏览器兼容性: 添加缺失的供应商特定指令到 '{0}' ({1})</value>
   </data>
   <data name="BestPracticeDuplicatePropertyInRule" xml:space="preserve">
-    <value>Best practice: The property '{0}' is already specified in the rule. Remove any unneeded duplicates</value>
+    <value>最佳方法: 在规则中已经指定属性 '{0}'。删除任何不需要的重复项</value>
   </data>
   <data name="BestPracticeDuplicatePropertyWithSameValueInRule" xml:space="preserve">
-    <value>Best practice: The property '{0}' with the same value is already specified in the rule and should be removed</value>
+    <value>最佳方法: 在规则中已经指定了有相同值的属性 '{0}'，应该删除。</value>
   </data>
   <data name="BestPracticeDuplicateSelectors" xml:space="preserve">
-    <value>Best practice: The exact same selector is already defined on line {0}. Consider consolidating the duplicate style rules</value>
+    <value>最佳方法: 完全相同的选择器已定义在 '{0}' 行，考虑合并重复的样式规则</value>
   </data>
   <data name="BestPracticeInlineIncompat" xml:space="preserve">
-    <value>Best practice: The '{0}' property has no effect with 'display: inline' and should be removed</value>
+    <value>最佳方法: '{0}' 属性与 'display: inline' 不起作用，应该删除</value>
   </data>
   <data name="BestPracticePseudosAfterOtherSelectors" xml:space="preserve">
-    <value>Best practice: "{0}" should be placed before any pseudo classes/elements</value>
+    <value>最佳方法: "{0}" 应放在任何伪类/元素之前</value>
   </data>
   <data name="BestPracticeStandardPropertyOrder" xml:space="preserve">
-    <value>Browser compatibility: Place the standard property below its vendor specific implementations</value>
+    <value>浏览器兼容性: 将标准属性低于它的供应商特定的实现</value>
   </data>
   <data name="BestPracticeZeroUnit" xml:space="preserve">
-    <value>Best Practice: Don't specify the unit type ({0}) when the value is zero. (Disable this check in Tools -&gt; Options)</value>
+    <value>最佳方法: 当值为零时不指定单位类型 ({0})。(在工具 -&gt; 选项禁用此检查)</value>
   </data>
   <data name="IE6OnlyPropertyHackName" xml:space="preserve">
-    <value>Make visible to IE6 only</value>
+    <value>仅在 IE6 中可见</value>
   </data>
   <data name="IE6OnlySelectorHackSmartTagActionName" xml:space="preserve">
-    <value>Make visible to IE6 only</value>
+    <value>仅在 IE6 中可见</value>
   </data>
   <data name="IE7AboveSelectorHackSmartTagActionName" xml:space="preserve">
-    <value>Make visible to IE7 and above</value>
+    <value>使 IE7 及以上可见</value>
   </data>
   <data name="IE7BelowPropertyHackName" xml:space="preserve">
-    <value>Make visible to IE7 and below</value>
+    <value>使 IE7 及以下可见</value>
   </data>
   <data name="IE7OnlySelectorHackSmartTagActionName" xml:space="preserve">
-    <value>Make visible to IE7 only</value>
+    <value>仅在 IE7 中可见</value>
   </data>
   <data name="IE8AboveSelectorHackSmartTagActionName" xml:space="preserve">
-    <value>Make visible to IE8 and above</value>
+    <value>使 IE8 及以上可见</value>
   </data>
   <data name="LessImportOnceDeprecated" xml:space="preserve">
-    <value>The "@import-once" directive was removed in LESS 1.4.  Use "@import"instead.</value>
+    <value>"@import-once" 指令在 LESS 1.4 中已被移除。请使用 "@import" 代替。</value>
   </data>
   <data name="OverQualifiedSmartTagActionName" xml:space="preserve">
-    <value>Trim over qualified selectors</value>
+    <value>裁剪超过限定的选择器</value>
   </data>
   <data name="PerformanceDontOverQualifySelectors" xml:space="preserve">
-    <value>Performance: Don't over qualify selectors. Remove all selectors before "{0}" ({1}). ID's must only occur once per web page and doesn't need further qualification.</value>
+    <value>性能: 不超过限定选择器。在 "{0}" ({1}) 之前删除所有选择器。ID 必须是每个web页只能出现一次，不需要进一步的资格。</value>
   </data>
   <data name="PerformanceDontUseStarSelector" xml:space="preserve">
-    <value>Performance: Never use the universal selector. It has a big negative performance impact on browser rendering.</value>
+    <value>性能: 从不使用通用的选择器。它对浏览器的呈现有大负面性能影响。</value>
   </data>
   <data name="PerformanceEmbedImageAsDataUri" xml:space="preserve">
-    <value>Performance: The image is only {0} bytes and should be embedded as a base64 dataURI to reduce the number of HTTP requests.</value>
+    <value>性能: 图像只有 {0} 字节，并应嵌入 base64 dataURI 以减少 HTTP 请求数量。</value>
   </data>
   <data name="PerformanceUseShorthand" xml:space="preserve">
-    <value>Performance: Use shorthand notation. The properties {0} can be replaced by {1}</value>
+    <value>性能: 使用速记符号。属性 {0} 可以通过 {1} 替换</value>
   </data>
   <data name="RemoveSelectorHackSmartTagActionName" xml:space="preserve">
-    <value>Remove IE selector hack</value>
+    <value>删除 IE 选择器 hack</value>
   </data>
   <data name="RemoveUnusedCssRuleSmartTagActionName" xml:space="preserve">
-    <value>Remove unused rule</value>
+    <value>删除未使用的规则</value>
   </data>
   <data name="ReverseEmbedSmartTagActionName" xml:space="preserve">
-    <value>Save to file</value>
+    <value>保存到文件</value>
   </data>
   <data name="StandardSmartTagActionName" xml:space="preserve">
-    <value>Add missing standard property ({0})</value>
+    <value>添加缺失的标准属性 ({0})</value>
   </data>
   <data name="UpdateEmbedSmartTagActionName" xml:space="preserve">
-    <value>Re-embed dataUri from "{0}"</value>
+    <value>从"{0}"重新嵌入 dataUri</value>
   </data>
   <data name="UrlSmartTagActionName" xml:space="preserve">
-    <value>Embed as base64 dataUri</value>
+    <value>嵌入 base64 dataUri</value>
   </data>
   <data name="ValidationColorValuesInRange" xml:space="preserve">
-    <value>Validation (WE): Values must be between 0 and 255</value>
+    <value>验证 (WE): 值必须介于0和255之间</value>
   </data>
   <data name="ValidationDeprecatedVendorDeclaration" xml:space="preserve">
-    <value>Validation (WE): "{0}" has been deprecated and is safe to remove. Use the un-prefixed standard property instead.</value>
+    <value>验证 (WE): "{0}" 已被弃用，可以安全地删除。使用未加前缀的标准属性。</value>
   </data>
   <data name="ValidationPseudoOrder" xml:space="preserve">
-    <value>Validation (WE): Pseudo elements ("{0}") must be specified after pseudo classes ("{1}").</value>
+    <value>验证 (WE): 伪元素 ("{0}") 必须在伪类 ("{1}") 之后指定。</value>
   </data>
   <data name="ValidationVendorDeclarations" xml:space="preserve">
-    <value>Validation (WE): "{0}" is not a valid vendor specific property or it may have been deprecated.</value>
+    <value>验证 (WE): "{0}" 不是有效的供应商特定属性，或它可能已被否决。</value>
   </data>
   <data name="ValidationVendorDirective" xml:space="preserve">
-    <value>Validation (WE): "{0}" is not a valid vendor specific @-directive or it may have been deprecated.</value>
+    <value>验证 (WE): "{0}" 不是一个有效的供应商特定 @-指令，或它可能已被否决。</value>
   </data>
   <data name="ValidationVendorPseudo" xml:space="preserve">
-    <value>Validation (WE): "{0}" is not a valid vendor specific pseudo class/element or it may have been deprecated.</value>
+    <value>验证 (WE): "{0}"不是有效的供应商特定伪类/元素或它可能已被否决。</value>
   </data>
   <data name="VendorOrderSmartTagActionName" xml:space="preserve">
-    <value>Move property below last vendor specific</value>
+    <value>移除以下供应商特定属性</value>
   </data>
   <data name="VendorSmartTagActionName" xml:space="preserve">
-    <value>Add missing vendor specifics</value>
+    <value>添加缺失的供应商详情</value>
   </data>
 </root>
