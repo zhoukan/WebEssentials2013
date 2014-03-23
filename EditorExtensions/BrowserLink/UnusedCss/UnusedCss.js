@@ -255,7 +255,7 @@
             return;
         }
 
-        recordButton = window.browserLink.menu.addButton("Unused CSS", "Start recording CSS Usage (CTRL+ALT+R)", function () {
+        recordButton = window.browserLink.menu.addButton("未使用的 CSS", "开始录制 CSS 用法 (CTRL+ALT+R)", function () {
             toggleRecordingMode();
         });
 
