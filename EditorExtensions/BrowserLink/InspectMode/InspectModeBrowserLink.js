@@ -91,7 +91,7 @@
         if (!window.browserLink.menu)
             return;
 
-        window.browserLink.menu.addButton("Inspect", "Use CTRL+ALT+I to enable Inspect Mode", function () {
+        window.browserLink.menu.addButton("检查", "使用 CTRL+ALT+I 开启检查模式", function () {
             if (!inspectModeOn)
                 turnOnInspectMode();
             else
