@@ -341,8 +341,8 @@
         <Icon guid="guidImages" id="bmpLogo"/>
         <CommandFlag>DynamicVisibility</CommandFlag>
         <Strings>
-          <CommandName>压缩选定项</CommandName>
-          <ButtonText>压缩选定项</ButtonText>
+          <CommandName>压缩选定区域</CommandName>
+          <ButtonText>压缩选定区域</ButtonText>
         </Strings>
       </Button>
 
