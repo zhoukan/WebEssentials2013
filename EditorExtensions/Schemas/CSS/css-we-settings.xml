@@ -7,43 +7,43 @@
                   include-root-properties="false"
                   syntax="@-we-palette"
                   browsers="none"
-                  description="Parent directive for handling custom color palettes in Visual Studio.">
+                  description="父指令用于处理在 Visual Studio 中的自定义调色板。">
 
 
     <CssAtDirective name="global"
                     include-root-directives="false"
                     include-root-properties="false"
                     browsers="none"
-                    description="A collection of colors that apply to all CSS color properties">
+                    description="一个适用于所有 CSS 颜色属性的颜色集合">
 
       <CssProperty ref="color" 
-                   description="A collection of colors that only applies to the specified property." />
+                   description="颜色集合仅适用于指定的属性。" />
     </CssAtDirective>
 
     <!--<CssAtDirective name="specific"
                     include-root-directives="false"
                     include-root-properties="false"
                     browsers="none"
-                    description="A collection of colors that only applies to the specified property.">
+                    description="颜色集合仅适用于指定的属性。">
 
       <CssProperty ref="color" />
 
       <CssProperty name="background"
                    restriction="color"
                    type="color"
-                   description="Defines colors used for 'background' and 'background-color' properties." />
+                   description="定义用于'background' 和 'background-color'属性的颜色。" />
 
       <CssProperty name="border"
                    restriction="color"
                    type="color"
-                   description="Defines colors used for 'border' and 'border-color' properties" />
+                   description="定义用于'border' 和 'border-color'属性的颜色" />
     </CssAtDirective>
 
     <CssAtDirective name="unspecified"
                     include-root-directives="false"
                     include-root-properties="false"
                     browsers="none"
-                    description="A collection of colors that applies to all CSS color properties not declared in the @specific directive.">
+                    description="在 @specific 指令中声明的颜色不应该用于所有 CSS 颜色属性的集合。">
 
       <CssProperty ref="color" />
     </CssAtDirective>-->
