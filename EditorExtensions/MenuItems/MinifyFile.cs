@@ -74,7 +74,7 @@ namespace MadsKristensen.EditorExtensions
                 if (settings.AutoMinify)
                     return;
                 if (MessageBoxResult.Yes == MessageBox.Show(
-                        "Do you also want to enable automatic minification when the source file changes?",
+                        "当源文件更改时,你仍然想要开启自动压缩吗?",
                         "Web Essentials", MessageBoxButton.YesNo, MessageBoxImage.Question)
                     )
                 {
