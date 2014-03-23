@@ -236,11 +236,11 @@
         if (!window.browserLink.menu)
             return;
 
-        takeChangesNowMenuItem = window.browserLink.menu.addButton("Save F12 changes", "Use CTRL+ALT+T to sync the current CSS changes into Visual Studio", function () {
+        takeChangesNowMenuItem = window.browserLink.menu.addButton("保存 F12 更改", "使用 CTRL+ALT+T 同步当前的 CSS 更改到 Visual Studio", function () {
             performAudit();
         });
 
-        continuouslyTakeChangesMenuItem = window.browserLink.menu.addCheckbox("F12 auto-sync", "Use CTRL+ALT+U to continuously sync CSS changes into Visual Studio", false, function () {
+        continuouslyTakeChangesMenuItem = window.browserLink.menu.addCheckbox("F12 自动同步", "使用 CTRL+ALT+U 连续同步 CSS 更改到 Visual Studio", false, function () {
             setContinuousSyncMode(!continuousSyncMode);
         });
 
