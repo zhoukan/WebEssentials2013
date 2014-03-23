@@ -6,8 +6,8 @@ module.exports = {
         var messageItems = res.map(function (result) {
             var error = result.error;
 
-            if (error.reason === "Missing radix parameter.")
-                error.reason = "When using the parseInt function, remember to specify the radix parameter. Example: parseInt('3', 10)";
+            if (error.reason === "缺少基数参数。")
+                error.reason = "当使用 parseInt 函数时，请记住要指定基数参数。 例如: parseInt('3', 10)";
 
             return {
                 Line: parseInt(error.line, 10)
