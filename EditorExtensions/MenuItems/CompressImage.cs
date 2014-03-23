@@ -31,7 +31,7 @@ namespace MadsKristensen.EditorExtensions
 
             int items = _selectedPaths.Count();
 
-            button.Text = items == 1 ? "Optimize image" : "Optimize images";
+            button.Text = items == 1 ? "优化图像" : "优化图像";
             button.Enabled = items > 0;
         }
 

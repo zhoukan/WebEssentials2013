@@ -452,7 +452,7 @@
         <Parent guid="guidDiffCmdSet" id="MyMenuGroup" />
         <CommandFlag>DynamicVisibility</CommandFlag>
         <Strings>
-          <ButtonText>比较所选文件</ButtonText>
+          <ButtonText>比较选定的文件</ButtonText>
         </Strings>
       </Button>
 
