@@ -50,7 +50,7 @@
                             }
                             else {
                                 enableDesignMode(false);
-                                alert("Design Mode doesn't work for ASP.NET Web Forms");
+                                alert("设计模式不适用于 ASP.NET Web 窗体");
                             }
                         }
                     }
@@ -115,7 +115,7 @@
             }
         }
         else {
-            alert("The browser doesn't support Design Mode");
+            alert("浏览器不支持设计模式");
         }
     }
 
@@ -161,7 +161,7 @@
         if (!window.browserLink.menu)
             return;
 
-        window.browserLink.menu.addButton("Design", "Use CTRL+ALT+D to enable Design Mode", function () {
+        window.browserLink.menu.addButton("设计", "使用 CTRL+ALT+D 开启设计模式", function () {
             if (!inspectModeOn)
                 enableDesignMode(true);
             else
