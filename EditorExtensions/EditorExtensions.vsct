@@ -17,14 +17,14 @@
       <Menu guid="guidEditorExtensionsCmdSet" id="SubMenu" priority="0x001" type="Menu">
         <Parent guid="guidEditorLinesCmdSet" id="LinesTopMenuGroup" />
         <Strings>
-          <ButtonText>编码选择</ButtonText>
+          <ButtonText>转换字符编码</ButtonText>
         </Strings>
       </Menu>
       <Menu guid="guidEditorExtensionsCmdSet" id="TransformSubMenu" priority="0x001" type="Menu">
         <Parent guid="guidEditorLinesCmdSet" id="LinesTopMenuGroup" />
         <Strings>
-          <ButtonText>变换选区</ButtonText>
-          <CommandName>变换选区</CommandName>
+          <ButtonText>转换选定区域</ButtonText>
+          <CommandName>转换选定区域</CommandName>
         </Strings>
       </Menu>
       <Menu guid="guidCssIntellisenseCmdSet" id="CssIntellisenseSubMenu" priority="0x201" type="Menu">
@@ -46,7 +46,7 @@
         <Parent guid="guidEditorLinesCmdSet" id="LinesTopMenuGroup" />
         <CommandFlag>DynamicVisibility</CommandFlag>
         <Strings>
-          <ButtonText>所选的行</ButtonText>
+          <ButtonText>选定的行</ButtonText>
         </Strings>
       </Menu>
     </Menus>
@@ -151,7 +151,7 @@
         <CommandFlag>DynamicVisibility</CommandFlag>
         <CommandFlag>DefaultDisabled</CommandFlag>
         <Strings>
-          <ButtonText>HTML 编码</ButtonText>
+          <ButtonText>HTML 实体字符</ButtonText>
         </Strings>
       </Button>
 
